@@ -27,6 +27,28 @@ app.get("/keiyo_add", (req, res) => {
   res.render('db1', { data: station });
 });
 
+let soymilk = [
+  { id:1, maker:"キッコーマン", name:"調製豆乳", type:"調製豆乳"},
+  { id:2, maker:"キッコーマン", name:"おいしい無調整豆乳", type:"無調整豆乳"},
+  { id:3, maker:"キッコーマン", name:"豆乳飲料 麦芽コーヒー", type:"豆乳飲料"},
+  { id:4, maker:"マルサン", name:"調製豆乳", type:"調製豆乳"},
+  { id:5, maker:"マルサン", name:"有機豆乳 無調整", type:"無調整豆乳"},
+];
+
+app.get("/soymilk", (req, res) => {
+  res.render('soymilk', { data: soymilk });
+});
+
+app.get("/soymilk_add", (req, res) => {
+  let id = req.query.id;
+  let maker = req.query.maker;
+  let name = req.query.name;
+  let type = req.query.type;
+  let newdata = { id: id, maker: maker, name: name, type: type };
+  soymilk.push( newdata );
+  res.render('soymilk', { data: soymilk });
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>好きな豆乳</title>
+</head>
+<body>
+  <h2>好きな豆乳一覧</h2>
+  <table border="1">
+    <tr><th>ID</th><th>メーカー</th><th>商品名</th><th>種類</th></tr>
+    <% for( let row of data ) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.maker %></td>
+        <td><%= row.name %></td>
+        <td><%= row.type %></td>
+      </tr>
+    <% } %>
+  </table>
+  <a href="/public/soymilk_add.html">豆乳を追加する</a>
+</body>
+</html>

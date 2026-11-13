@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>豆乳を追加する</title>
+</head>
+<body>
+    <h2>豆乳を追加する</h2>
+    <form action="/soymilk_add">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" required>
+
+        <label for="maker">メーカー</label>
+        <input type="text" name="maker" id="maker" required>
+
+        <label for="name">商品名</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="type">種類</label>
+        <input type="text" name="type" id="type" required>
+
+        <input type="submit" value="登録">
+    </form>
+    <a href="/soymilk">一覧に戻る</a>
+</body>
+</html>
